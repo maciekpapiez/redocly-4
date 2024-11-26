@@ -2503,11 +2503,11 @@
           "minLength" : 0,
           "maxLength" : 1024
         },
-        "dateTo" : {
+        "dateFrom" : {
           "type" : "string",
           "format" : "date"
         },
-        "dateFrom" : {
+        "dateTo" : {
           "type" : "string",
           "format" : "date"
         }
@@ -2744,6 +2744,12 @@
         "lenient" : {
           "type" : "boolean"
         },
+        "rangeDurationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
+        "leapDurationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
         "durationField" : {
           "$ref" : "#/definitions/DurationField"
         },
@@ -2754,12 +2760,6 @@
         "maximumValue" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "leapDurationField" : {
-          "$ref" : "#/definitions/DurationField"
-        },
-        "rangeDurationField" : {
-          "$ref" : "#/definitions/DurationField"
         }
       }
     },
@@ -3665,10 +3665,6 @@
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
-        "millisOfDay" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "centuryOfEra" : {
           "type" : "integer",
           "format" : "int32"
@@ -3709,6 +3705,10 @@
           "type" : "integer",
           "format" : "int32"
         },
+        "millisOfDay" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "fields" : {
           "type" : "array",
           "items" : {
@@ -3736,10 +3736,6 @@
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
-        "millisOfDay" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "hourOfDay" : {
           "type" : "integer",
           "format" : "int32"
@@ -3753,6 +3749,10 @@
           "format" : "int32"
         },
         "millisOfSecond" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "millisOfDay" : {
           "type" : "integer",
           "format" : "int32"
         },
