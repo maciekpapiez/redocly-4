@@ -71,7 +71,7 @@ This project with a single sidebar is also available on GitHub at the [Warp Sing
 │   ├── background.svg
 │   ├── grid-dark.svg
 │   ├── grid.svg
-│   ├── logo.svg
+│   ├── logo.png
 │   ├── navigation.png
 │   └── sitemap.png
 ├── index.page.tsx
