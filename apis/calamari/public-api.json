@@ -3665,6 +3665,10 @@
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
+        "millisOfDay" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "centuryOfEra" : {
           "type" : "integer",
           "format" : "int32"
@@ -3705,10 +3709,6 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "millisOfDay" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "fields" : {
           "type" : "array",
           "items" : {
@@ -3736,6 +3736,10 @@
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
+        "millisOfDay" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "hourOfDay" : {
           "type" : "integer",
           "format" : "int32"
@@ -3749,10 +3753,6 @@
           "format" : "int32"
         },
         "millisOfSecond" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "millisOfDay" : {
           "type" : "integer",
           "format" : "int32"
         },
