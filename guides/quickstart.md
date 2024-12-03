@@ -1,4 +1,4 @@
-# Warp API Quickstart Guide
+# Calamari API Quickstart Guide
 
 Welcome to Warp! This quickstart guide will help you get started with Warp's time travel API, allowing you to make your first API call and begin exploring the possibilities of temporal manipulation.
 
