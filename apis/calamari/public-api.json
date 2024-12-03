@@ -2732,6 +2732,9 @@
     "DateTimeField" : {
       "type" : "object",
       "properties" : {
+        "durationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
         "name" : {
           "type" : "string"
         },
@@ -2744,15 +2747,6 @@
         "lenient" : {
           "type" : "boolean"
         },
-        "rangeDurationField" : {
-          "$ref" : "#/definitions/DurationField"
-        },
-        "leapDurationField" : {
-          "$ref" : "#/definitions/DurationField"
-        },
-        "durationField" : {
-          "$ref" : "#/definitions/DurationField"
-        },
         "minimumValue" : {
           "type" : "integer",
           "format" : "int32"
@@ -2760,6 +2754,12 @@
         "maximumValue" : {
           "type" : "integer",
           "format" : "int32"
+        },
+        "leapDurationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
+        "rangeDurationField" : {
+          "$ref" : "#/definitions/DurationField"
         }
       }
     },
@@ -3665,19 +3665,23 @@
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
+        "hourOfDay" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "minuteOfHour" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "secondOfMinute" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "millisOfSecond" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "millisOfDay" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "centuryOfEra" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "yearOfEra" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "yearOfCentury" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -3693,19 +3697,15 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "hourOfDay" : {
+        "centuryOfEra" : {
           "type" : "integer",
           "format" : "int32"
         },
-        "minuteOfHour" : {
+        "yearOfEra" : {
           "type" : "integer",
           "format" : "int32"
         },
-        "secondOfMinute" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "millisOfSecond" : {
+        "yearOfCentury" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -3736,10 +3736,6 @@
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
-        "millisOfDay" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
         "hourOfDay" : {
           "type" : "integer",
           "format" : "int32"
@@ -3753,6 +3749,10 @@
           "format" : "int32"
         },
         "millisOfSecond" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "millisOfDay" : {
           "type" : "integer",
           "format" : "int32"
         },
