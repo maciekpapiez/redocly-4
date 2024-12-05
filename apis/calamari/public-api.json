@@ -2732,9 +2732,6 @@
     "DateTimeField" : {
       "type" : "object",
       "properties" : {
-        "durationField" : {
-          "$ref" : "#/definitions/DurationField"
-        },
         "name" : {
           "type" : "string"
         },
@@ -2747,6 +2744,15 @@
         "lenient" : {
           "type" : "boolean"
         },
+        "durationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
+        "rangeDurationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
+        "leapDurationField" : {
+          "$ref" : "#/definitions/DurationField"
+        },
         "minimumValue" : {
           "type" : "integer",
           "format" : "int32"
@@ -2754,12 +2760,6 @@
         "maximumValue" : {
           "type" : "integer",
           "format" : "int32"
-        },
-        "leapDurationField" : {
-          "$ref" : "#/definitions/DurationField"
-        },
-        "rangeDurationField" : {
-          "$ref" : "#/definitions/DurationField"
         }
       }
     },
@@ -2811,12 +2811,12 @@
         "supported" : {
           "type" : "boolean"
         },
+        "precise" : {
+          "type" : "boolean"
+        },
         "unitMillis" : {
           "type" : "integer",
           "format" : "int64"
-        },
-        "precise" : {
-          "type" : "boolean"
         }
       }
     },
@@ -3642,6 +3642,10 @@
     "LocalDateTime" : {
       "type" : "object",
       "properties" : {
+        "millisOfDay" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "year" : {
           "type" : "integer",
           "format" : "int32"
@@ -3681,7 +3685,15 @@
           "type" : "integer",
           "format" : "int32"
         },
-        "millisOfDay" : {
+        "centuryOfEra" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "yearOfEra" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "yearOfCentury" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -3694,18 +3706,6 @@
           "format" : "int32"
         },
         "weekOfWeekyear" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "centuryOfEra" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "yearOfEra" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "yearOfCentury" : {
           "type" : "integer",
           "format" : "int32"
         },
@@ -3733,6 +3733,10 @@
     "LocalTime" : {
       "type" : "object",
       "properties" : {
+        "millisOfDay" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
         "chronology" : {
           "$ref" : "#/definitions/Chronology"
         },
@@ -3749,10 +3753,6 @@
           "format" : "int32"
         },
         "millisOfSecond" : {
-          "type" : "integer",
-          "format" : "int32"
-        },
-        "millisOfDay" : {
           "type" : "integer",
           "format" : "int32"
         },
